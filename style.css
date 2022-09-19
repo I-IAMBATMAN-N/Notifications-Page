@@ -1,3 +1,20 @@
+/* 
+### Primary
+
+- Red: hsl(1, 90%, 64%)
+- Blue: hsl(219, 85%, 26%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Very light grayish blue: hsl(210, 60%, 98%)
+- Light grayish blue 1: hsl(211, 68%, 94%)
+- Light grayish blue 2: hsl(205, 33%, 90%)
+- Grayish blue: hsl(219, 14%, 63%)
+- Dark grayish blue: hsl(219, 12%, 42%)
+- Very dark blue: hsl(224, 21%, 14%)
+*/
+
 @font-face {
   font-family: PlusJakartaSans;
   src: url("fonts/static/PlusJakartaSans-Medium.ttf");
@@ -10,7 +27,7 @@
 }
 
 html {
-  background-color: #e9ecef;
+  background-color: hsl(211, 68%, 94%);
 }
 * {
   padding: 0;
@@ -23,11 +40,10 @@ body {
 }
 
 .main {
-  width: 800px;
-  height: 700px;
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #f8f9fa;
+  background-color: hsl(0, 0%, 100%);
   margin-top: 50px;
   border-radius: 10px;
 }
@@ -49,16 +65,20 @@ body {
 
 .main header button {
   border: none;
-  background-color: #f8f9fa;
+  background-color: hsl(0, 0%, 100%);
   color: #495057;
+  cursor: pointer;
+}
+.main header button:hover {
+  text-decoration: underline;
 }
 
-.counter {
+.count {
   display: inline-block;
   width: 30px;
   height: 20px;
-  background-color: #364fc7;
-  color: white;
+  background-color: hsl(219, 85%, 26%);
+  color: hsl(0, 0%, 100%);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -68,7 +88,75 @@ body {
 }
 
 /* notification section */
-
 .notifications {
   padding: 20px 20px;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: hsl(211, 68%, 94%);
+}
+
+.notification:hover {
+  border: solid hsl(205, 33%, 90%) 1px;
+}
+.notification h3 {
+  font-size: 12px;
+  font-weight: normal;
+  color: hsl(219, 14%, 63%);
+  margin-bottom: 4px;
+  flex: 0 0 auto;
+}
+
+.notification-info {
+  padding-left: 20px;
+}
+
+.notification h3 span img {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.read {
+  background-color: hsl(0, 0%, 100%);
+}
+.user {
+  display: inline-block;
+  margin-right: 2.5px;
+  color: hsl(224, 21%, 14%);
+}
+
+.post {
+  color: hsl(219, 12%, 42%);
+}
+
+.time-stamp {
+  font-size: 10px;
+  color: hsl(219, 14%, 63%);
+}
+
+.group {
+  color: hsl(219, 85%, 26%);
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+}
+
+.message-text {
+  font-size: 12px;
+  border: solid hsl(205, 33%, 90%) 1px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: hsl(219, 14%, 63%);
+  margin-top: 10px;
+  line-height: 16px;
+  word-spacing: 1px;
 }
