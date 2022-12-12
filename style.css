@@ -132,6 +132,9 @@ body {
   border-radius: 50%;
   margin-left: 0.2rem;
 }
+.notification.read .dot {
+  display: none;
+}
 .time-stamp {
   font-size: 1rem;
   color: hsl(219, 14%, 63%);
@@ -152,4 +155,14 @@ body {
   margin-top: 1rem;
   line-height: 1.6rem;
   word-spacing: 0.1rem;
+}
+@media (max-width: 750px) {
+  html {
+    font-size: 55%;
+  }
+  .main {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+  }
 }
