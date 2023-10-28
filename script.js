@@ -13,7 +13,7 @@ function count() {
   notification.forEach((e) => {
     if (!e.classList.contains("read")) {
       count += 1;
-      console.log(count);
+      // console.log(count);
     }
     countInner.innerHTML = count;
   });
